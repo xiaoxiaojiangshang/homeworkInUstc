@@ -1,0 +1,21 @@
+
+
+Input of file "dataIn.txt"
+2048	 2048
+CP1.1
+CP1.1
+CP1.1
+CP1.1
+CP1.1
+CP1.1
+CP1.1
+CP1.1
+
+
+Output of Matrix C for Serial = AB
+
+Whole running time    = 670.767260 seconds
+Serial coputer time  = 670.767260 seconds
+Parallel compute time = 45.649301 seconds
+speed up for 2048*2048 is 14.693922
+:1:528210432.000000 2:528210432.000000
