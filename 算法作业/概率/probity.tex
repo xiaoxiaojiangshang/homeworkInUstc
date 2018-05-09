@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{CTEX}
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{ listings} 
+\usepackage{eqnarray}
+\usepackage{amsmath}
+
+ \title{信号与信息处理}
+% \author{姜贵平}
+\begin{document}
+ \maketitle
+ \begin{flushright}
+ 姓名：姜贵平\\学号：SA17011142
+ \end{flushright}
+ \section{second-layer}
+ \begin{align}
+\frac{\partial E}{\partial w_{kj}^{(2)}}&=\frac{\partial E}{\partial {y_k}}*\frac{\partial {y_k}}{\partial w_{kj}^{(2)}}\\
+&=-\frac{1}{y_k}*f'(z_k)*h(\sum\limits_{i=0}^Dw_{ji}^{(1)}*x_i)
+ \end{align}
+
+
+ \section{first-layer}
+  \begin{align}
+ \frac{\partial E}{\partial w_{ji}^{(1)}}&=\frac{\partial E}{\partial {y_k}}*\frac{\partial {y_k}}{\partial w_{ji}^{(1)}}\\
+ &=-\frac{1}{y_k}*f'(z_k)*w_{kj}^{(2)}*h'(\sum\limits_{i=0}^Dw_{ji}^{(1)}*x_i)*x_i
+\end{align}
+  其中：
+ \begin{center}
+ 	$z_k=\sum\limits_{j=0}^M* w_{kj}^{(2)}*h(\sum\limits_{i=0}^Dw_{ji}^{(1)}*x_i)$\\
+ 	$f'(x_i)=\frac{exp(x_i)*\sum\limits_{i=1}^K exp(x_i)-exp^2(x_i)}{(\sum\limits_{i=1}^K exp(x_i)^2}$\\
+ 	$h(x)=tanh(x)=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$\\
+ 	$h'(x)=\frac{4}{(e^{x}+e^{-x})^2}$
+  \end{center}
+\end{document}
+
